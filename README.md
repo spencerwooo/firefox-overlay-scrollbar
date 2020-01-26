@@ -7,7 +7,6 @@
 🦊 <em>A working prototype of custom styleable overlay scrollbars on Firefox 72+.</em>
 
 ![](https://img.shields.io/badge/Firefox-72+-ff7139?logo=Mozilla%20Firefox&style=flat-square)
-[![](https://img.shields.io/badge/🇨🇳中文-README-fec057?style=flat-square)](./README-zh.md)
 [![](https://img.shields.io/badge/license-MIT-6c5eee?style=flat-square)](./LICENSE)
 </div>
 
@@ -25,7 +24,7 @@ First, close all instances of Firefox, and **delete Firefox's old script/startup
 
 Next, **download the entire repo** with either Git or `Download ZIP`. Uncompress the downloaded zip file.
 
-Then, first find the folder `firefox` inside the downloaded repo directory, **copy the `defaults` folder and the file `config.js` to Firefox's installation directory**, i.e., where `firefox.exe` lives.
+Then, find the folder `firefox` inside the downloaded repo directory, **copy the `defaults` folder and the file `config.js` to Firefox's installation directory**, i.e., where `firefox.exe` lives.
 
 ![](https://i.loli.net/2020/01/26/bhz1VpZav4MCKlx.png)
 
@@ -43,7 +42,27 @@ Restart Firefox and you should be able to see the custom scrollbar take effect.
 
 ## Customization
 
-We can tweak the file inside our newly created `chrome/userChrome` folder called `custom_scrollbars.uc.js`. See the file's comments for more information.
+We can tweak the file inside our newly created `chrome/userChrome` folder called `custom_scrollbars.uc.js`. The following features can be customized:
+
+- hide scrollbars
+- hide scrollbar buttons
+- **floating scrollbars (on top of web content)**
+- custom scrollbar size
+- custom scrollbar opacity
+- custom scrollbar background color / background image for color gradient
+- custom scrollbar corner background color / background image for color gradient
+- **custom scrollbar thumb color / background image**
+- custom scrollbar hovered-thumb color / background image for color gradient
+- custom scrollbar thumb roundness / border-radius
+- custom scrollbar thumb border width
+- custom scrollbar thumb border color
+- custom scrollbar button color / background image for color gradient
+- custom scrollbar hovered-button color / background image for color gradient
+- custom scrollbar button roundness / border-radius / arrow
+
+See the file's comments for more information.
+
+**You'll need to delete Firefox's old script/startup cache at `about:profiles » Local Directory » Open Folder` every time you change the script under `chrome/userChrome` folder.**
 
 ---
 
