@@ -18,7 +18,9 @@
 
 ## Installation
 
-First, close all instances of Firefox, and **delete Firefox's old script/startup cache** at `about:profiles » Local Directory » Open Folder`
+**WARNING:** You'll need to set `about:config » toolkit.legacyUserProfileCustomizations.stylesheets` to `true` for the following procedures.
+
+To begin with, close all instances of Firefox, and **delete Firefox's old script/startup cache** at `about:profiles » Local Directory » Open Folder`
 
 ![](https://i.loli.net/2020/01/26/wxiPjBKWothuGVf.png)
 
