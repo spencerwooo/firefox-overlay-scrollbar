@@ -15,7 +15,7 @@
 
 ## Demo
 
-
+![](assets/demo.gif)
 
 ## 安装
 
