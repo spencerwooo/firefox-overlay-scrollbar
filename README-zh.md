@@ -4,20 +4,20 @@
 
 <h1>Firefox Overlay Scrollbars</h1>
 
-🦊 <em>A working prototype of custom styleable overlay scrollbars on Firefox 72+.</em>
+🦊 <em>Firefox 自定义浮动滚动条 - 支持 Firefox 72+</em>
 
 ![](https://img.shields.io/badge/Firefox-72+-ff7139?logo=Mozilla%20Firefox&style=flat-square)
-[![](https://img.shields.io/badge/🇨🇳中文-README-fec057?style=flat-square)](./README-zh.md)
+[![](https://img.shields.io/badge/🇺🇸en--US-README-fec057?style=flat-square)](./README.md)
 [![](https://img.shields.io/badge/license-MIT-6c5eee?style=flat-square)](./LICENSE)
 </div>
 
-<h5> 🎲 Derived from the all-in-one feature-complete Firefox user script repo <a href="https://github.com/Aris-t2/CustomJSforFx">Aris-t2/CustomJSforFx</a>.<h5>
+<h5> 🎲 来自功能更全面的 Firefox 用户脚本大合集 <a href="https://github.com/Aris-t2/CustomJSforFx">Aris-t2/CustomJSforFx</a>.<h5>
 
 ## Demo
 
 
 
-## Installation
+## 安装
 
 First, close all instances of Firefox, and **delete Firefox's old script/startup cache** at `about:profiles » Local Directory » Open Folder`
 
@@ -41,7 +41,7 @@ Finally:
 
 Restart Firefox and you should be able to see the custom scrollbar take effect.
 
-## Customization
+## 个性化
 
 We can tweak the file inside our newly created `chrome/userChrome` folder called `custom_scrollbars.uc.js`. See the file's comments for more information.
 
