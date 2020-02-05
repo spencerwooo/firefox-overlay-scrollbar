@@ -10,11 +10,16 @@
 [![](https://img.shields.io/badge/license-MIT-6c5eee?style=flat-square)](./LICENSE)
 </div>
 
-<h5> 🎲 Derived from the all-in-one feature-complete Firefox user script repo <a href="https://github.com/Aris-t2/CustomJSforFx">Aris-t2/CustomJSforFx</a>.<h5>
+<h6> 🎲 Derived from the all-in-one feature-complete Firefox user script repo <a href="https://github.com/Aris-t2/CustomJSforFx">Aris-t2/CustomJSforFx</a>, and the Windows 10 style scrollbar repo <a href="https://github.com/endeavoursc/firefox-overlay-scrollbars-win10">endeavoursc/firefox-overlay-scrollbars-win10</a>.<h6>
 
 ## Demo
 
-![](assets/demo.gif)
+<h6>There're 2 styles of scrollbar styles available, both are tested and workable on Firefox v72+.</h6>
+
+|               Style                |                             Preview                             |
+| :--------------------------------: | :-------------------------------------------------------------: |
+|     Windows 10 style scrollbar     |  <img src="assets/demo-win.gif" alt="demo-win" width="600px">   |
+| Custom (rounded corners) scrollbar | <img src="assets/demo-custom.gif" alt="demo-win" width="600px"> |
 
 ## Installation
 
@@ -40,9 +45,27 @@ Finally:
 
 ![](https://i.loli.net/2020/01/26/HESxRq9XmWFhBfC.png)
 
-Restart Firefox and you should be able to see the custom scrollbar take effect.
+Change the `userChrome.js` file, in order to import 2 styles of floating scrollbars that I have included:
+
+- Windows 10 style scrollbar:
+
+```javascript
+userChrome.import("/userChrome/custom_scrollbars.uc.js", "UChrm");
+```
+
+- Custom (rounded corners) scrollbar:
+
+```javascript
+userChrome.import("/userChrome/win10_scrollbars.uc.js", "UChrm");
+```
+
+<h6>🔺 <strong>WARNING:</strong> Don't import both userChrome.js scripts, or Firefox will be confused.</h6>
+
+Restart Firefox and you should be able to see the Windows 10 pre-built style or your custom style scrollbar take effect.
 
 ## Customization
+
+<h6>🔺 <strong>NOTICE:</strong> Most of tweaks are only available for the <code>custom_scrollbars.uc.js</code> version.</h6>
 
 We can tweak the file inside our newly created `chrome/userChrome` folder called `custom_scrollbars.uc.js`. The following features can be customized:
 
