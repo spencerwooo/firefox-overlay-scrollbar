@@ -50,13 +50,13 @@ Change the `userChrome.js` file, in order to import 2 styles of floating scrollb
 - Windows 10 style scrollbar:
 
 ```javascript
-userChrome.import("/userChrome/custom_scrollbars.uc.js", "UChrm");
+userChrome.import("/userChrome/win10_scrollbars.uc.js", "UChrm");
 ```
 
 - Custom (rounded corners) scrollbar:
 
 ```javascript
-userChrome.import("/userChrome/win10_scrollbars.uc.js", "UChrm");
+userChrome.import("/userChrome/custom_scrollbars.uc.js", "UChrm");
 ```
 
 <h6>🔺 <strong>WARNING:</strong> Don't import both userChrome.js scripts, or Firefox will be confused.</h6>
