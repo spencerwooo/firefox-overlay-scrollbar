@@ -70,7 +70,7 @@ var userChrome = {
     setTimeout(function() {
       Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
                 .getService(Components.interfaces.mozIJSSubScriptLoader)
-                .loadSubScriptWithOptions(userChrome.getURLSpecFromFile(aFile),
+                .loadSubScriptWithOptions(userChrome.getURLSpecFromActualFile(aFile),
                                           {target: window,
                                            charset: userChrome.charSet,
                                            ignoreCache: userChrome.ignoreCache});
@@ -93,7 +93,7 @@ var userChrome = {
         userChrome.log(aRelDirToken ? ("[" + aRelDirToken + "]/" +
             (aFolder && aFolder != "*" ? aFolder + "/" : "") + aFiles[0].leafName) :
             aFiles[0].path, "userChrome.loadOverlay");
-        document.loadOverlay(userChrome.getURLSpecFromFile(aFiles.shift()), null);
+        document.loadOverlay(userChrome.getURLSpecFromActualFile(aFiles.shift()), null);
         setTimeout(arguments.callee, userChrome.loadOverlayDelay);
       }
     }, aDelay);
@@ -153,11 +153,11 @@ var userChrome = {
     }
   },
 
-  getURLSpecFromFile: Components.classes["@mozilla.org/network/io-service;1"]
+  getURLSpecFromActualFile: Components.classes["@mozilla.org/network/io-service;1"]
                                 .getService(Components.interfaces.nsIIOService)
                                 .getProtocolHandler("file")
                                 .QueryInterface(Components.interfaces.nsIFileProtocolHandler)
-                                .getURLSpecFromFile,
+                                .getURLSpecFromActualFile,
 
   /* Console logger */
   log: function(aMsg, aCaller) {
